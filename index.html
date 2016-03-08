@@ -95,19 +95,23 @@
             <br>
             <h3>Adaptive Thresholding</h3>
             <br>
-            <p>
+            <p class="lead">
             For each bin in the log spectrogram, a binary value is computed based on the median magnitude of the surrounding bins. If the bin is less than the median, it is set to 0 in the output, otherwise it is set to 1. The results will be tested with a variety of neighborhood sizes. 
+
+            Below is an example log spectrogram and the resulting binary image from our adaptive thresholding algorithm:
             </p>
+            <img src="assets/spectrogram.png" height="183" width="148">
+            <img src="assets/bin_img.png" height="183" width="148">
             <br>
             <h3>Hamming Similarity</h3>
             <br>
-            <p>
+            <p class="lead">
             Hamming Similarity is a method of measuring similarity between binary arrays. The two arrays are subtracted from each other, and the resulting array is summed using the absolute value of each element. The resulting value is a measure of the similarity of the two binary arrays. 
             </p>
             <br>
             <h3>Hough Transform</h3>
             <br>
-            <p>
+            <p class="lead">
             The Hough Transform is an image processing technique used to find lines common to the largest possible sets of points. Here, it is applied to the binary image to determine the proper alignment between the querry and reference samples. Within a limited range of angles, the value that yields the maximum Hamming similarity is returned. 
             </p>
             <br>
