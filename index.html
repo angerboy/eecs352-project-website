@@ -48,7 +48,7 @@
                         <a href="#about">Overview</a>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="#services">Techniques</a>
                     </li>
                     <li>
                         <a href="#contact">Contact</a>
@@ -92,17 +92,38 @@
         <!-- Second Featurette -->
         <div class="featurette" id="services">
             <h2 class="featurette-heading">Image Processing Techniques</h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <br>
+            <h3>Adaptive Thresholding</h3>
+            <br>
+            <p>
+            For each bin in the log spectrogram, a binary value is computed based on the median magnitude of the surrounding bins. If the bin is less than the median, it is set to 0 in the output, otherwise it is set to 1. The results will be tested with a variety of neighborhood sizes. 
+            </p>
+            <br>
+            <h3>Hamming Similarity</h3>
+            <br>
+            <p>
+            Hamming Similarity is a method of measuring similarity between binary arrays. The two arrays are subtracted from each other, and the resulting array is summed using the absolute value of each element. The resulting value is a measure of the similarity of the two binary arrays. 
+            </p>
+            <br>
+            <h3>Hough Transform</h3>
+            <br>
+            <p>
+            The Hough Transform is an image processing technique used to find lines common to the largest possible sets of points. Here, it is applied to the binary image to determine the proper alignment between the querry and reference samples. Within a limited range of angles, the value that yields the maximum Hamming similarity is returned. 
+            </p>
+            <br>
         </div>
 
         <hr class="featurette-divider">
 
         <!-- Third Featurette -->
-        <div class="featurette" id="contact">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-            <h2 class="featurette-heading">The Third Heading
-                <span class="text-muted">Will Seal the Deal.</span>
-            </h2>
+        <div class="featurette">
+            <h2 class="featurette-heading">Our Data</h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+
+        <!-- Fourth Featurette -->
+        <div class="featurette">
+            <h2 class="featurette-heading">Results</h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
 
