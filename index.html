@@ -78,7 +78,13 @@
         <!-- First Featurette -->
         <div class="featurette" id="about">
             <h2 class="featurette-heading">Project Overview</h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <br>
+            <p class="lead">Our audio fingerprinting tool uses a combination of signal processing and image processing techniques (described in <a href="http://music.cs.northwestern.edu/publications/Rafii-Coover-Han%20-%20An%20Audio%20Fingerprinting%20System%20for%20Live%20Version%20Identification%20using%20Image%20Processing%20Techniques%20-%20ICASSP%202014.pdf">this paper</a> by Zafar Rafii, Bob Coover and Jinyu Han) to determine a similarity value between two audio samples. The original paper proposed a method of audio fingerprinting that did not require the sample in question to be derived from the exact same recording as a sample in a queried database. First, we derive a log magnitude spectrogram of the sample and apply an adaptive binary threshold each bin. The sample is then compared to a database of audio samples using a Hamming Similarity measure. Ideal alignment of the sample and a sample from the database is determined using the Hough Transform, an image processing technique that finds paths that pass through a maximum number of points in a given image.
+            </p>
+            <br>
+            <p class="lead">
+            The tool will return a similarity value between the audio sample in question and the most similar sample in the database based on the adjusted Hamming similarity. Similarly, any two audio samples can be explicitly tested against each other. Ultimately, the results of this similarity measure will be compared roughly to human perception through conducted surveys regarding the perceived similarity of different audio samples according to participants..
+            </p>
         </div>
 
         <hr class="featurette-divider">
