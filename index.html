@@ -41,21 +41,6 @@
                 </button>
                 <a class="navbar-brand" href="#">EECS 352 Final Project</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#about">Overview</a>
-                    </li>
-                    <li>
-                        <a href="#services">Techniques</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
@@ -100,17 +85,17 @@
 
         <!-- Second Featurette -->
         <div class="featurette" id="services">
-            <h2 class="featurette-heading">Method</h2>
+            <h3>Method</h3>
             <br>
             <h3>Pitch Shifting</h3>
             <br>
-            <p class="lead">
+            <p>
             The query sample was pitch shifted up five half steps and down five half steps. Each of these values was run through the subsequent steps and compared to the reference to account for variations in pitch in different performances of the same song.
             </p>
             <br>
             <h3>Convert to Spectrograms</h3>
             <br>
-            <p class="lead">
+            <p>
             Query and reference signals were first converted into log spectrograms. A window size of 2048 and hop size of 1024 was found to be effective, even for the shortest processed queries. These were processed for each of the pitch shifted signals outputted above. 
             </p>
             <br>
@@ -231,15 +216,17 @@
 
         <!-- Fourth Featurette -->
         <div class="featurette">
-            <h2 class="featurette-heading">Results</h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h3>Results</h3>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
 
         <hr class="featurette-divider">
 
         <div class="featurette">
-            <h2 class="featurette-heading">Results</h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h3>Conclusion</h3>
+            <p>In terms of the implementation of the original algorithm, we were successful. We were able to get the fingerprinting algorithm to return noticeably higher h-values for queries of live versions of songs set against their studio versions than for those same queries set against unrelated songs. However, we were relatively unsuccessful at using the algorithm as a “similarity measure” between a query and reference. There were a few reasons for this, based on problems in our methods and approach.
+            Our initial analysis of the outputted h-values and parameter adjustments was focused on maximizing the h-values of the live query against a studio version of itself (without simply under-thresholding), rather than looking for parameters that maximized the difference between these self-live/studio h-values (which we’ll call “S” here) and the h-values of the query to unrelated songs (which we’ll call “D” here). If the goal is only to correctly identify a studio version of a song given the live query, the magnitude of the difference between S and any given D does not matter, as long as S is greater than all Ds. However, for our purposes, this magnitude of the difference between S and D was relevant.
+            </p>
         </div>
 
         <hr class="featurette-divider">
